@@ -103,6 +103,7 @@ GET '/movies'
 - Fetches a dictionary of movies in which the keys are the ids and the value is title and date
 - Request Arguments: None
 - Returns: 1- Success is true, 2- movies_list object
+```
 {
     "movies": {
         "1": [
@@ -115,71 +116,77 @@ GET '/movies'
         ]
     }
 }
-
+```
 
 DELETE '/actors/<int:actor_id>'
 - Delete an actor 
 - Request Arguments: actor_id
 - Returns: 1- Success is True. 2- deleted actor id
+```
 {
     "deleted": 2,
     "success": true
 }
-
+```
 
 DELETE '/movies/<int:movie_id>'
 - Delete a movie 
 - Request Arguments: movie_id
 - Returns: 1- Success is True. 2- deleted movie id
+```
 {
     "deleted": 2,
     "success": true
 }
-
+```
 
 POST '/actors'
 - Fetches the user's input (name, age, gender), add the new actor to the database 
 - Request Arguments: None
 - Returns: 1- Success is True. 2- created actor id. 3- number of actors 
+```
 {
     "created": 7,
     "success": true,
     "totalActors": 6
 }
-
+```
 
 POST '/movies'
 - Fetches the user's input (title, date), add the new movie to the database 
 - Request Arguments: None
 - Returns: 1- Success is True. 2- created movie id. 3- number of movies 
+```
 {
     "created": 5,
     "success": true,
     "totalMovies": 4
 }
-
+```
 
 
 PATCH '/actors/<int:actor_id>'
 - Fetches the user's input (age), edit the existing actor
 - Request Arguments: None
 - Returns: 1- Success is True. 2- edited actor id. 3- the new age 
+```
 {
     "age": 20,
     "id": 1,
     "success": true
 }
-
+```
 
 
 PATCH '/movies/<int:movie_id>'
 - Fetches the user's input (title), edit the existing movie
 - Request Arguments: None
 - Returns: 1- Success is True. 2- edited movie id. 3- the new title 
+```
 {
     "id": 1,
     "success": true,
     "title": "New title"
 }
-
+```
 
