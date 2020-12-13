@@ -77,7 +77,7 @@ POST '/movies'
 PATCH '/actors/<int:actor_id>'
 PATCH '/movies/<int:movie_id>'
 
-```
+
 GET '/actors'
 - Fetches a dictionary of actors in which the keys are the ids and the value is name, age, and gender
 - Request Arguments: None
@@ -97,7 +97,7 @@ GET '/actors'
     }
 }
 
-```
+
 GET '/movies'
 - Fetches a dictionary of movies in which the keys are the ids and the value is title and date
 - Request Arguments: None
@@ -115,7 +115,7 @@ GET '/movies'
     }
 }
 
-```
+
 DELETE '/actors/<int:actor_id>'
 - Delete an actor 
 - Request Arguments: actor_id
@@ -125,7 +125,7 @@ DELETE '/actors/<int:actor_id>'
     "success": true
 }
 
-```
+
 DELETE '/movies/<int:movie_id>'
 - Delete a movie 
 - Request Arguments: movie_id
@@ -135,7 +135,7 @@ DELETE '/movies/<int:movie_id>'
     "success": true
 }
 
-```
+
 POST '/actors'
 - Fetches the user's input (name, age, gender), add the new actor to the database 
 - Request Arguments: None
@@ -146,7 +146,7 @@ POST '/actors'
     "totalActors": 6
 }
 
-```
+
 POST '/movies'
 - Fetches the user's input (title, date), add the new movie to the database 
 - Request Arguments: None
@@ -157,7 +157,7 @@ POST '/movies'
     "totalMovies": 4
 }
 
-```
+
 
 PATCH '/actors/<int:actor_id>'
 - Fetches the user's input (age), edit the existing actor
@@ -169,7 +169,7 @@ PATCH '/actors/<int:actor_id>'
     "success": true
 }
 
-```
+
 
 PATCH '/movies/<int:movie_id>'
 - Fetches the user's input (title), edit the existing movie
@@ -181,4 +181,4 @@ PATCH '/movies/<int:movie_id>'
     "title": "New title"
 }
 
-```
+
