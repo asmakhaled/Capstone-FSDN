@@ -54,6 +54,19 @@ export FLASK_ENV=development
 flask run
 ```
 
+## Testing
+To run the tests, run
+```
+dropdb agency
+createdb agency
+python manage.py db upgrade
+psql agency < agency_test.psql
+python test_app.py
+```
+
+Test the endpoints with [Postman](https://getpostman.com).
+ - Import the postman collection `./starter/agency.postman_collection.json`
+
 ## Endpoint 
 
 GET '/actors'
@@ -170,16 +183,3 @@ PATCH '/movies/<int:movie_id>'
 }
 
 ```
-
-## Testing
-To run the tests, run
-```
-dropdb agency
-createdb agency
-python manage.py db upgrade
-psql agency < agency.psql
-python test_app.py
-```
-
-Test the endpoints with [Postman](https://getpostman.com).
- - Import the postman collection `./starter/agency.postman_collection.json`
