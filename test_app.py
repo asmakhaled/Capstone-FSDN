@@ -217,22 +217,22 @@ class AgencyTestCase(unittest.TestCase):
     # test delete an actor
     def test_7_delete_actors(self):
         res = self.client().delete(
-            '/actors/2', headers=self.producer_token)
+            '/actors/1', headers=self.producer_token)
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
-        self.assertEqual(data['deleted'], 2)
+        self.assertEqual(data['deleted'], 1)
 
     # test delete a movie
     def test_8_delete_movies(self):
         res = self.client().delete(
-            '/movies/2', headers=self.producer_token)
+            '/movies/1', headers=self.producer_token)
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
-        self.assertEqual(data['deleted'], 2)
+        self.assertEqual(data['deleted'], 1)
 
     """
     Test for expected errors
