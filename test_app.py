@@ -143,7 +143,7 @@ class AgencyTestCase(unittest.TestCase):
     """
 
     # test add actor
-    def test_add_actor(self):
+    def test_1_add_actor(self):
         res = self.client().post(
             '/actors',
             json=self.new_actor,
@@ -156,7 +156,7 @@ class AgencyTestCase(unittest.TestCase):
         self.assertTrue(data['totalActors'])
 
     # test add movie
-    def test_add_movie(self):
+    def test_2_add_movie(self):
         res = self.client().post(
             '/movies',
             json=self.new_movie,
@@ -169,7 +169,7 @@ class AgencyTestCase(unittest.TestCase):
         self.assertTrue(data['totalMovies'])
 
     # test edit actor
-    def test_edit_actor(self):
+    def test_3_edit_actor(self):
         res = self.client().patch(
             '/actors/1',
             json=self.new_age,
@@ -182,7 +182,7 @@ class AgencyTestCase(unittest.TestCase):
         self.assertTrue(data['age'])
 
     # test edit movie
-    def test_edit_movie(self):
+    def test_4_edit_movie(self):
         res = self.client().patch(
             '/movies/1',
             json=self.new_title,
@@ -195,7 +195,7 @@ class AgencyTestCase(unittest.TestCase):
         self.assertTrue(data['title'])
 
     # test get actors
-    def test_get_actors(self):
+    def test_5_get_actors(self):
         res = self.client().get(
             '/actors', headers=self.assistant_token)
         data = json.loads(res.data)
@@ -205,7 +205,7 @@ class AgencyTestCase(unittest.TestCase):
         self.assertTrue(data['actors'])
 
     # test get movies
-    def test_get_movies(self):
+    def test_6_get_movies(self):
         res = self.client().get(
             '/movies', headers=self.assistant_token)
         data = json.loads(res.data)
@@ -215,7 +215,7 @@ class AgencyTestCase(unittest.TestCase):
         self.assertTrue(data['movies'])
 
     # test delete an actor
-    def test_delete_actors(self):
+    def test_7_delete_actors(self):
         res = self.client().delete(
             '/actors/2', headers=self.producer_token)
         data = json.loads(res.data)
@@ -225,7 +225,7 @@ class AgencyTestCase(unittest.TestCase):
         self.assertEqual(data['deleted'], 2)
 
     # test delete a movie
-    def test_delete_movies(self):
+    def test_8_delete_movies(self):
         res = self.client().delete(
             '/movies/2', headers=self.producer_token)
         data = json.loads(res.data)
