@@ -82,6 +82,7 @@ GET '/actors'
 - Fetches a dictionary of actors in which the keys are the ids and the value is name, age, and gender
 - Request Arguments: None
 - Returns: 1- Success is true, 2- actors_list object
+```
 {
     "actors": {
         "1": [
@@ -96,7 +97,7 @@ GET '/actors'
         ]
     }
 }
-
+```
 
 GET '/movies'
 - Fetches a dictionary of movies in which the keys are the ids and the value is title and date
