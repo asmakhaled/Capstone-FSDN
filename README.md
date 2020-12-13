@@ -60,7 +60,6 @@ To run the tests, run
 dropdb agency
 createdb agency
 python manage.py db upgrade
-psql agency < agency_test.psql
 python test_app.py
 ```
 
